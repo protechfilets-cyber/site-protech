@@ -1,0 +1,247 @@
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réalisations – Pro Tech Filets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Réalisations et exemples de chantiers Pro Tech Filets – pose de filets de sécurité en sous-face.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orange:#f7931e;
+      --dark:#222222;
+      --grey:#6b6b6b;
+      --bg:#f5f5f7;
+      --max-width:1040px;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:"Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:#fff;
+      color:var(--dark);
+      line-height:1.7;
+      font-size:16px;
+    }
+    a { color:inherit; text-decoration:none; }
+
+    header {
+      position:sticky; top:0; z-index:20;
+      background:rgba(255,255,255,0.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #ececec;
+      padding:0.5rem 0;
+    }
+
+    .container {
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:0 1.5rem;
+    }
+    .nav {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:170px;
+    }
+
+    .logo-wrap { display:flex; align-items:center; gap:0.6rem; }
+    .logo-wrap img { height:140px; width:auto; }
+    .brand-title { font-weight:600; font-size:1.05rem; letter-spacing:0.03em; }
+
+    nav ul { display:flex; list-style:none; gap:1.6rem; font-size:0.92rem; }
+    nav a { position:relative; padding-bottom:0.1rem; }
+    nav a::after {
+      content:"";
+      position:absolute;
+      left:0; bottom:0;
+      width:0; height:2px;
+      background:var(--orange);
+      transition:width 0.18s ease-out;
+    }
+    nav a:hover::after { width:100%; }
+
+    .hero {
+      background:radial-gradient(circle at top right, #ffe1b8 0, #ffffff 55%);
+      border-bottom:1px solid #f0f0f0;
+    }
+    .hero-inner {
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:3.4rem 1.5rem 2.6rem;
+    }
+    .hero h1 {
+      font-size:clamp(2rem, 2.4vw + 1.2rem, 2.6rem);
+      margin-bottom:0.7rem;
+    }
+    .hero p {
+      color:var(--grey);
+      max-width:760px;
+      font-size:0.98rem;
+    }
+    .hero-badges {
+      display:flex; flex-wrap:wrap;
+      gap:0.6rem;
+      margin-top:1.2rem;
+    }
+    .badge {
+      font-size:0.78rem;
+      padding:0.25rem 0.6rem;
+      border-radius:999px;
+      border:1px solid #dddddd;
+      background:#ffffff;
+    }
+
+    section { padding:2.8rem 1.5rem; background:#fff; }
+    .section-inner { max-width:var(--max-width); margin:0 auto; }
+    .section-title { font-size:1.5rem; margin-bottom:0.4rem; }
+    .section-sub { font-size:0.95rem; color:var(--grey); margin-bottom:1.4rem; }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+      gap:1.2rem;
+    }
+
+    .card {
+      background:#ffffff;
+      border-radius:14px;
+      border:1px solid #e6e6e6;
+      overflow:hidden;
+      box-shadow:0 6px 22px rgba(0,0,0,0.06);
+    }
+
+    .card img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+      background:#f2f2f2;
+    }
+
+    .card .body { padding:0.95rem 1rem 1.05rem; }
+    .card h3 { font-size:1rem; margin-bottom:0.25rem; }
+    .card p { font-size:0.9rem; color:#555; }
+
+    .note {
+      margin-top:1.4rem;
+      background:#fff5e7;
+      border-left:3px solid var(--orange);
+      border-radius:10px;
+      padding:0.9rem 1rem;
+      color:#6a4b20;
+      font-size:0.86rem;
+    }
+
+    footer {
+      border-top:1px solid #ececec;
+      padding:1.3rem 1.5rem;
+      text-align:center;
+      font-size:0.8rem;
+      color:#8a8a8a;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo-wrap">
+      <img src="logo-pro-tech-filets.jpg" alt="Réalisation 1 – pose de filets de sécurité">
+      <div class="brand-title">Pro Tech Filets</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="references.html">Réalisations</a></li>
+        <li><a href="index.html#contact">Contact / Devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Réalisations</h1>
+    <p>Une galerie photo de nos réalisations en pose de filets de sécurité en sous-face.</p>
+    <div class="hero-badges">
+      <div class="badge">Photos réelles</div>
+      <div class="badge">Descriptions courtes</div>
+      <div class="badge">Grille responsive</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner">
+    <h2 class="section-title">Galerie photos</h2>
+    <p class="section-sub">Quelques photos de nos réalisations</p>
+
+    <div class="grid">
+      <article class="card">
+        <img src="realisation1.jpg" alt="Réalisation 2 – pose de filets de sécurité">
+        <div class="body">
+          <h3>Réalisation</h3>
+          <p>Exemple de réalisation.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="realisation2.jpg" alt="Réalisation 3 – pose de filets de sécurité">
+        <div class="body">
+          <h3>Réalisation</h3>
+          <p>Exemple de réalisation.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="realisation3.jpg" alt="Réalisation 4 – pose de filets de sécurité">
+        <div class="body">
+          <h3>Réalisation</h3>
+          <p>Exemple de réalisation.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="realisation4.jpg" alt="Réalisation 5 – pose de filets de sécurité">
+        <div class="body">
+          <h3>Réalisation</h3>
+          <p>Exemple de réalisation.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="realisation5.jpg" alt="Réalisation 6 – pose de filets de sécurité">
+        <div class="body">
+          <h3>Réalisation</h3>
+          <p>Exemple de réalisation.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="realisation6.jpg" alt="Chantier 6 – milieu occupé">
+        <div class="body">
+          <h3>Réalisation</h3>
+          <p>Exemple de réalisation.</p>
+        </div>
+      </article>
+    </div>
+
+    
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Protech Filets – Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

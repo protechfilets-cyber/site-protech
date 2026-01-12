@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Protreferencesech Filets – Filets de sécurité en sous-face</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Pro Tech Filets – Pose de filets de sécurité en sous-face pour sécuriser les chantiers et limiter les risques de chute de hauteur et de matériaux.">
+    <style>
+        :root {
+            --orange: #f7931e;
+            --dark: #222222;
+            --grey: #6b6b6b;
+            --bg: #f5f5f7;
+            --max-width: 1040px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #ffffff;
+            color: var(--dark);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        a { color: inherit; text-decoration: none; }
+        header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ececec;
+    padding: 0.5rem 0;
+}
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+        .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 170px;
+}
+
+
+        .logo-wrap { display: flex; align-items: center; gap: 0.6rem; }
+        .logo-wrap img {
+    height: 140px;
+    width: auto;
+}
+
+
+        .brand-title { font-weight: 600; font-size: 1.05rem; letter-spacing: 0.03em; }
+        nav ul { display: flex; list-style: none; gap: 1.6rem; font-size: 0.92rem; }
+        nav a { position: relative; padding-bottom: 0.1rem; }
+        nav a::after {
+            content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
+            background: var(--orange); transition: width 0.18s ease-out;
+        }
+        nav a:hover::after { width: 100%; }
+        .burger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+        .burger span { width: 22px; height: 2px; background: var(--dark); }
+        .hero { background: radial-gradient(circle at top right, #ffe1b8 0, #ffffff 55%); border-bottom: 1px solid #f0f0f0; }
+        .hero-inner {
+            max-width: var(--max-width); margin: 0 auto;
+            padding: 3.8rem 1.5rem 3rem;
+            display: grid; grid-template-columns: minmax(0,3fr) minmax(0,2.3fr);
+            gap: 2.4rem; align-items: center;
+        }
+        .hero h1 { font-size: clamp(2rem, 2.4vw + 1.2rem, 2.6rem); margin-bottom: 0.8rem; }
+        .hero h1 span { color: var(--orange); }
+        .hero-lead { font-size: 0.98rem; color: var(--grey); margin-bottom: 1.4rem; }
+        .hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem; }
+        .badge {
+            font-size: 0.78rem; padding: 0.25rem 0.6rem;
+            border-radius: 999px; border: 1px solid #dddddd; background: #ffffff;
+        }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+        .btn-primary {
+            background: var(--orange); color: #ffffff; border-radius: 999px;
+            padding: 0.7rem 1.4rem; border: none; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+        }
+        .btn-primary:hover { filter: brightness(0.95); }
+        .btn-ghost {
+            background: transparent; border-radius: 999px; padding: 0.7rem 1.2rem;
+            border: 1px solid #d4d4d4; font-size: 0.9rem; cursor: pointer; color: var(--dark);
+        }
+        .hero-note { font-size: 0.8rem; color: #888888; margin-top: 0.6rem; }
+        .hero-card {
+            background: #ffffff; border-radius: 16px; padding: 1.4rem 1.5rem;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.06); border: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+        }
+        .hero-card h2 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .hero-grid { display: grid; grid-template-columns: 1fr; gap: 0.7rem; margin-top: 0.9rem; }
+        .hero-item { padding: 0.55rem 0.7rem; border-radius: 10px; background: #f7f7f9; }
+        .hero-item strong { display: block; font-size: 0.9rem; }
+        section { padding: 3rem 1.5rem; }
+        .section-inner { max-width: var(--max-width); margin: 0 auto; }
+        .section-title { font-size: 1.5rem; margin-bottom: 0.4rem; }
+        .section-sub { font-size: 0.95rem; color: var(--grey); margin-bottom: 1.8rem; }
+        .services { background: #ffffff; }
+        .service-grid {
+            display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.3rem;
+        }
+        .card {
+            background: #ffffff; border-radius: 14px; padding: 1.2rem 1.2rem 1.1rem;
+            border: 1px solid #e6e6e6; font-size: 0.94rem;
+        }
+        .card small {
+            text-transform: uppercase; font-size: 0.76rem;
+            letter-spacing: 0.06em; color: var(--orange); font-weight: 600;
+        }
+        .card h3 { font-size: 1.02rem; margin: 0.35rem 0 0.4rem; }
+        .expertise { background: var(--bg); }
+        .grid-2 {
+            display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1.3fr); gap: 2rem;
+        }
+        .list-check { list-style: none; font-size: 0.94rem; display: grid; gap: 0.45rem; }
+        .list-check li { display: flex; align-items: flex-start; }
+        .list-check li::before { content: "✔"; color: var(--orange); font-size: 0.8rem; margin-right: 0.4rem; }
+        .process { background: #ffffff; }
+        .steps {
+            display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1rem; font-size: 0.9rem;
+        }
+        .step {
+            border-radius: 12px; border: 1px solid #e6e6e6;
+            padding: 1rem; background: #fcfcfc; position: relative;
+        }
+        .step-number {
+            position: absolute; top: 0.7rem; right: 0.9rem;
+            font-size: 0.8rem; color: #aaaaaa; font-weight: 600;
+        }
+        .step-title { font-weight: 600; margin-bottom: 0.4rem; font-size: 0.95rem; }
+        .zones-avis { background: var(--bg); }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.9rem 0 1.4rem; }
+        .tag {
+            font-size: 0.8rem; padding: 0.25rem 0.7rem;
+            border-radius: 999px; border: 1px solid #dddddd; background: #ffffff;
+        }
+        .avis-grid {
+            display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; font-size: 0.9rem;
+        }
+        .avis {
+            background: #ffffff; border-radius: 12px; border: 1px solid #e6e6e6; padding: 1rem;
+        }
+        .avis strong { display: block; margin-top: 0.6rem; font-size: 0.83rem; color: #555555; }
+        .contact { background: #ffffff; }
+        .contact-grid {
+            display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 1.8rem;
+        }
+        form { display: grid; gap: 0.9rem; }
+        label { font-size: 0.85rem; font-weight: 500; color: var(--dark); }
+        input, textarea {
+            width: 100%; padding: 0.55rem 0.7rem; border-radius: 8px;
+            border: 1px solid #d1d1d1; font-family: inherit; font-size: 0.95rem;
+        }
+        textarea { min-height: 110px; resize: vertical; }
+        .contact-info { font-size: 0.95rem; }
+        .contact-info p { margin-bottom: 0.4rem; }
+        .contact-note {
+            margin-top: 1rem; background: #fff5e7; border-left: 3px solid var(--orange);
+            border-radius: 8px; padding: 0.8rem 0.9rem; font-size: 0.83rem; color: #6a4b20;
+        }
+        footer {
+            border-top: 1px solid #ececec; padding: 1.3rem 1.5rem;
+            text-align: center; font-size: 0.8rem; color: #8a8a8a;
+        }
+        @media (max-width: 980px) {
+            .hero-inner, .grid-2, .service-grid, .steps, .avis-grid, .contact-grid {
+                grid-template-columns: minmax(0,1fr);
+            }
+            .hero-inner { padding-top: 3.2rem; }
+        }
+        @media (max-width: 720px) {
+            nav ul {
+                position: fixed; inset: 64px 0 auto 0; background: #ffffff;
+                flex-direction: column; padding: 1rem 1.5rem 1.5rem;
+                border-bottom: 1px solid #ececec; transform: translateY(-120%);
+                transition: all 0.2s ease-out; opacity: 0; pointer-events: none;
+            }
+            nav ul.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+            .burger { display: flex; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <div class="logo-wrap">
+            <img src="logo-pro-tech-filets.jpg" alt="Logo Pro Tech Filets">
+            <div class="brand-title">Pro Tech Filets</div>
+        </div>
+        <nav>
+            <div class="burger" id="burger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#services">Prestations</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#process">Méthode</a></li>
+                <li><a href="realisations.html">réalisations</a></li>
+                <li><a href="#contact">Contact / Devis</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="hero-inner">
+            <div>
+                <h1>
+                    Filets de <span>sécurité en sous-face</span><br>
+                    pour sécuriser vos chantiers en hauteur
+                </h1>
+                <p class="hero-lead">
+                    Pro Tech Filets accompagne les entreprises du bâtiment pour la pose de filets en sous-face :
+                    protection des compagnons, limitation des chutes de matériaux, sécurisation des zones
+                    occupées situées en dessous.
+                </p>
+                <div class="hero-badges">
+                    <div class="badge">Chantiers neufs et rénovation</div>
+                    <div class="badge">Solutions temporaires ou durables</div>
+                    <div class="badge">Étude et pose sur mesure</div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Demander un devis</a>
+                    <a href="#services" class="btn-ghost">Voir les prestations</a>
+                </div>
+                <p class="hero-note">
+                    Étude possible à partir de plans, photos ou visite sur site.
+                </p>
+            </div>
+            <aside class="hero-card">
+                <h2>Pourquoi installer des filets en sous-face&nbsp;?</h2>
+                <p>
+                    Les filets de sécurité réduisent les risques liés au travail en hauteur et aux chutes d’objets.
+                    Ils protègent à la fois les opérateurs et les zones situées sous la zone de travaux.
+                </p>
+                <div class="hero-grid">
+                    <div class="hero-item">
+                        <strong>Prévention des chutes</strong>
+                        Sous dalles, planchers, charpentes ou passerelles.
+                    </div>
+                    <div class="hero-item">
+                        <strong>Protection des tiers</strong>
+                        Sécurisation des ateliers, bureaux ou circulations en dessous.
+                    </div>
+                    <div class="hero-item">
+                        <strong>Adaptation au chantier</strong>
+                        Filets, maillage et fixations choisis selon la configuration.
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="section-inner">
+            <h2 class="section-title">Prestations Pro Tech Filets</h2>
+            <p class="section-sub">
+                De l’étude à la dépose, Pro Tech Filets prend en charge la mise en place de vos filets
+                de sécurité en sous-face, en coordination avec les autres corps d’état.
+            </p>
+            <div class="service-grid">
+                <article class="card">
+                    <small>Filets en sous-face</small>
+                    <h3>Filets anti-chute de personnes</h3>
+                    <p>
+                        Pose de filets de sécurité sous dalles, planchers ou charpentes pour protéger les équipes
+                        contre le risque de chute de hauteur pendant les travaux.
+                    </p>
+                </article>
+                <article class="card">
+                    <small>Protection matériaux</small>
+                    <h3>Filets anti-débris</h3>
+                    <p>
+                        Filets destinés à retenir outils, gravats et éléments de structure au-dessus de zones de
+                        travail, de stockage ou de circulation du public.
+                    </p>
+                </article>
+                <article class="card">
+                    <small>Service complet</small>
+                    <h3>Étude, pose et dépose</h3>
+                    <p>
+                        Analyse de la configuration, choix des solutions, planification de la pose, ajustements
+                        possibles en cours de chantier et dépose en fin d’intervention.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="expertise" class="expertise">
+        <div class="section-inner grid-2">
+            <div>
+                <h2 class="section-title">Expertise sécurité chantier</h2>
+                <p class="section-sub">
+                    La pose de filets en sous-face s’inscrit dans une démarche globale de prévention des chutes
+                    de hauteur et de protection des personnes travaillant ou circulant sous la zone de travaux.
+                </p>
+                <ul class="list-check">
+                    <li>Étude des zones à sécuriser à partir des plans ou d’une visite sur site.</li>
+                    <li>Choix des maillages, résistances et systèmes de fixations adaptés.</li>
+                    <li>Pose dans les règles de l’art, contrôle visuel et tension adaptée.</li>
+                    <li>Possibilité d’adapter les filets en cours de chantier selon le phasage.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin-bottom:0.4rem;">Types de chantiers concernés</h3>
+                <p style="font-size:0.94rem; color:var(--grey);">
+                    Les filets de sécurité en sous-face sont particulièrement adaptés dans les cas suivants&nbsp;:
+                </p>
+                <ul class="list-check" style="margin-top:0.7rem;">
+                    <li>Travaux en sous-face de dalles béton ou planchers collaborants.</li>
+                    <li>Interventions sous charpentes métalliques ou bois.</li>
+                    <li>Réhabilitation en site occupé ou semi-occupé.</li>
+                    <li>Création ou modification de trémies et mezzanines.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="process" class="process">
+        <div class="section-inner">
+            <h2 class="section-title">Une méthode claire à chaque étape</h2>
+            <p class="section-sub">
+                L’objectif : sécuriser rapidement votre chantier, sans compliquer votre organisation ni ralentir les autres corps d’état.
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Premier contact</div>
+                    <p>Présentation du chantier : type de bâtiment, hauteur, surface, contraintes d’accès et planning.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Étude et devis</div>
+                    <p>Proposition de solution (type de filets, modes de fixation, surface) et devis détaillé.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Planification et pose</div>
+                    <p>Intervention planifiée en coordination avec les autres entreprises présentes sur le chantier.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Suivi et dépose</div>
+                    <p>Adaptations possibles en cours de travaux, puis dépose des filets une fois la zone sécurisée autrement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="avis" class="zones-avis">
+        <div class="section-inner grid-2">
+            <div>
+                <h2 class="section-title">Zones d’intervention</h2>
+                <p class="section-sub">
+                    Pro Tech Filets intervient sur des chantiers de construction, rénovation et maintenance
+                    pour des entreprises du bâtiment, industriels et collectivités.
+                </p>
+                <div class="tags">
+                    <span class="tag">Chantiers neufs</span>
+                    <span class="tag">Rénovation lourde</span>
+                    <span class="tag">Sites industriels</span>
+                    <span class="tag">Bâtiments tertiaires</span>
+                    <span class="tag">ERP et commerces</span>
+                </div>
+                <p style="font-size:0.9rem; color:var(--grey);">
+                    Les interventions sont organisées en lien avec la maîtrise d’ouvrage, la maîtrise d’œuvre,
+                    la coordination SPS et les autres entreprises pour s’intégrer au planning général.
+                </p>
+            </div>
+            <div>
+                <h2 class="section-title" style="font-size:1.25rem;">réalisations </h2>
+                <div style="margin-top:0.9rem;">
+                    <a class="btn-ghost" href="realisations.html" style="display:inline-block;">Voir toutes les réalisations</a>
+                </div>
+
+                <div class="avis-grid">
+                    <div class="avis">
+                        « Pose de filets en sous-face de dalles sur un chantier de réhabilitation. Bonne
+                        coordination avec le planning des autres corps d’état. »
+                        <strong>Entreprise générale – Rénovation</strong>
+                    </div>
+                    <div class="avis">
+                        « Travaux en milieu occupé dans un atelier en activité. Organisation efficace pour limiter
+                        l’impact sur la production. »
+                        <strong>Site industriel – Maintenance</strong>
+                    </div>
+                    <div class="avis">
+                        « Solution claire pour le coordinateur SPS, avec une mise en sécurité rapide des zones sensibles. »
+                        <strong>Maîtrise d’œuvre – Réhabilitation</strong>
+                    </div>
+                </div>
+                <p style="font-size:0.8rem; color:#999; margin-top:0.5rem;">
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="section-inner">
+            <h2 class="section-title">Contact & demande de devis</h2>
+            <p class="section-sub">
+                Décrivez votre projet : type de bâtiment, localisation, hauteur à sécuriser, surface approximative
+                et contraintes particulières. Une première estimation peut être réalisée à partir de ces éléments.
+            </p>
+            <div class="contact-grid">
+                <form>
+                    <div>
+                        <label for="nom">Nom / Société</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom ou le nom de la société">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.fr">
+                    </div>
+                    <div>
+                        <label for="tel">Téléphone</label>
+                        <input type="tel" id="tel" name="tel" placeholder="06 xx xx xx xx">
+                    </div>
+                    <div>
+                        <label for="message">Votre projet</label>
+                        <textarea id="message" name="message" placeholder="Type de chantier, localisation, hauteur, surface, planning prévisionnel…"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Envoyer la demande</button>
+                    <p style="font-size:0.78rem; color:#909090; margin-top:0.4rem;">
+                        Ce formulaire est statique pour l’instant. Il pourra être relié à une adresse e-mail
+                        ou à un service de formulaires lorsque le site sera hébergé.
+                    </p>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Protech Filets</strong></p>
+                    <p>Adresse : CLERMONT FERRAND</p>
+                    <p>Tél : 06 64 85 50 79</p>
+                    <p>E-mail : contact@protechfilets.fr </p>
+                    <div class="contact-note">
+                        Pour un devis précis, pensez à fournir :
+                        hauteur sous ouvrage, surface à sécuriser, photos récentes et contraintes d’accès
+                        (intérieur / extérieur, milieu occupé, horaires…).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    © <span id="year"></span> Pro Tech Filets – Filets de sécurité en sous-face. Tous droits réservés.
+</footer>
+<script>
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+    });
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+        });
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
